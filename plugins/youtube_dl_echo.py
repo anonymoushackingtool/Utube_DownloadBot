@@ -3,6 +3,7 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 @pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
 
+async def echo(bot, update):
 update_channel = Config.UPDATE_CHANNEL
     if update_channel:
         try:
