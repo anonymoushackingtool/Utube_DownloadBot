@@ -1,7 +1,7 @@
-from pyrogram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram import Client, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
-@pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
+@Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
 
 async def echo(bot, update):
 update_channel = Config.UPDATE_CHANNEL
