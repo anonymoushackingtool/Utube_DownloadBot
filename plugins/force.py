@@ -1,5 +1,5 @@
 import logging
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 
 import os
 import datetime
